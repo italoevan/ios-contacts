@@ -50,7 +50,7 @@ class ContactsViewController: UIViewController {
         }
         errorLabel.text = ""
         
-        users.append(User(uiImage: userImage.image!, nome: userName.text!))
+        users.insert(User(uiImage: userImage.image!, nome: userName.text!), at: 0)
         
         contactsTableView.reloadData()
         

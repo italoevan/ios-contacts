@@ -117,6 +117,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="MBu-ZX-zF3"/>
                     <connections>
+                        <outlet property="contactsTableView" destination="sKQ-ME-qOs" id="Vep-dd-H1g"/>
                         <outlet property="errorLabel" destination="dzo-7P-xZB" id="MVQ-cm-2Qr"/>
                         <outlet property="userImage" destination="rha-D8-X3e" id="8sX-Af-DQR"/>
                         <outlet property="userName" destination="fY5-L7-wWv" id="q2u-NG-lTR"/>
@@ -124,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYp-il-e1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="-530"/>
+            <point key="canvasLocation" x="409.92366412213738" y="-530.28169014084506"/>
         </scene>
         <!--App Tab Bar Controller-->
         <scene sceneID="uhQ-Kd-zIv">

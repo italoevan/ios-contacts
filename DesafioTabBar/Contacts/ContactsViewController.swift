@@ -15,13 +15,23 @@ class ContactsViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var contactsTableView: UITableView!
+    
+    var users: [User] = []
+    
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureImagePicker()
+        configTableView()
+    }
+    
+    private func configTableView()-> Void {
         
-       
+        contactsTableView.delegate = self
+        contactsTableView.dataSource = self
+        contactsTableView.register(AppTableViewCell.createNib(), forCellReuseIdentifier: AppTableViewCell.identifier)
     }
     
     func configureImagePicker()-> Void {
@@ -39,6 +49,12 @@ class ContactsViewController: UIViewController {
             return
         }
         errorLabel.text = ""
+        
+        users.append(User(uiImage: userImage.image!, nome: userName.text!))
+        
+        contactsTableView.reloadData()
+        
+        
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {

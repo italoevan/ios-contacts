@@ -1,8 +1,6 @@
-//
-//  User.swift
-//  DesafioTabBar
-//
-//  Created by Italo Gabriel Bezerra Evangelista on 14/04/25.
-//
+import UIKit
 
-import Foundation
+struct User {
+    let uiImage: UIImage
+    let nome: String
+}
